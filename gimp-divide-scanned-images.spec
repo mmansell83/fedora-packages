@@ -1,7 +1,7 @@
 %global gittag master
 Name:           gimp-divide-scanned-images
 Version:        201610
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        GIMP script for splitting separate sub-image fomr a composite image.
 
 License:        GPL v2+
@@ -9,6 +9,7 @@ URL:            https://github.com/FrancoisMalan/DivideScannedImages
 Source0:        %{url}/archive/%{gittag}/DivideScannedImages-%{gittag}.tar.gz
 
 Requires:       gimp >= 2.0.0
+Recommends:     gimp-deskew-plugin
 
 BuildArch:      noarch
 
