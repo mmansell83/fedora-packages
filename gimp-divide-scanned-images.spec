@@ -2,18 +2,19 @@
 %global gitreponame DivideScannedImages
 
 %global gimpplugindir %(gimptool --gimpplugindir)/plug-ins
-%global gimpscriptdir %(gimptool --gimpdatadir)/scrips
+%global gimpscriptdir %(gimptool --gimpdatadir)/scripts
 
 Name:           gimp-divide-scanned-images
 Version:        201610
-Release:        3%{?dist}
+Release:        6%{?dist}
 Summary:        GIMP script for splitting separate sub-image fomr a composite image.
 
 License:        GPL v2+
 URL:            https://github.com/FrancoisMalan/%{gitreponame}
 Source0:        %{url}/archive/%{gittag}/%{gitreponame}-%{gittag}.tar.gz
 
-Requires:       gimp >= 2.0.0
+BuildRequires:  gimp-devel-tools >= 2.0
+Requires:       gimp >= 2.0, gimp-libs >= 2.0
 Recommends:     gimp-deskew-plugin
 
 BuildArch:      noarch

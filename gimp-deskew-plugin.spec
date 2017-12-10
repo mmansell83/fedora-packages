@@ -1,18 +1,18 @@
 %global gittag master
 
 %global gimpplugindir %(gimptool --gimpplugindir)/plug-ins
-%global gimpscriptdir %(gimptool --gimpdatadir)/scrips
+%global gimpscriptdir %(gimptool --gimpdatadir)/scripts
 
 Name:           gimp-deskew-plugin
 Version:        1.1
-Release:        3%{?dist}
+Release:        5%{?dist}
 Summary:        A deskew plug-in for GIMP
 
 License:        GPL v2+
 URL:            https://github.com/prokoudine/gimp-deskew-plugin
 Source0:        %{url}/archive/%{gittag}/%{name}-%{gittag}.zip
 
-BuildRequires:  automake >= 1.6, autoconf >= 2.54, glib2-devel >= 2.0.0, intltool >= 0.17, gimp-devel >= 2.0, gcc, make
+BuildRequires:  automake >= 1.6, autoconf >= 2.54, glib2-devel >= 2.0.0, intltool >= 0.17, gimp-devel >= 2.0, gimp-devel-tools >= 2.0, gcc, make
 Requires:       gimp >= 2.0, gimp-libs >= 2.0
 Supplements:    gimp-divide-scanned-images
 
