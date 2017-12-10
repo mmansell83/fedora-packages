@@ -1,7 +1,11 @@
 %global gittag master
+
+%global gimpplugindir %(gimptool --gimpplugindir)/plug-ins
+%global gimpscriptdir %(gimptool --gimpdatadir)/scrips
+
 Name:           gimp-deskew-plugin
 Version:        1.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        A deskew plug-in for GIMP
 
 License:        GPL v2+
@@ -42,13 +46,16 @@ rm -rf %{buildroot}/usr/usr
 
 %files
 %license COPYING
-%{_libdir}/gimp/2.0/plug-ins/deskew
+%{gimpplugindir}/deskew
 %{_datarootdir}/%{name}/help/en/gimp-help.xml
 %{_datarootdir}/%{name}/help/en/index.html
 %{_datarootdir}/%{name}/help/images/wilber.png
 
 
 %changelog
+* Sun Dec 10 2017 Michael Mansell <michael.mansell@gmail.com>
+- Updated gimp paths to use system tooling to determine location
+
 * Sun Nov 26 2017 Michael Mansell <michael.mansell@gmail.com>
 - Initial attempt
 - Fix for weird path issues and extra files
